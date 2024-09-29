@@ -1,6 +1,6 @@
 # Проект «{{projectTitle}}»
 
-* Студент: [{{userName}}]({{userProfile}}).
+* Студент: [Лев Елистратов]({{https://htmlacademy.ru/profile/id2221427}}).
 * Наставник: `Неизвестно`.
 
 ---
