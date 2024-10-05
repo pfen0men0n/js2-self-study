@@ -1,7 +1,7 @@
 import { createElement } from '../render';
 
 function createTripPointCreateTemplate () {
-    return `<li class="trip-events__item">
+  return `<li class="trip-events__item">
               <form class="event event--edit" action="#" method="post">
                 <header class="event__header">
                   <div class="event__type-wrapper">
@@ -166,21 +166,21 @@ function createTripPointCreateTemplate () {
 }
 
 
-export default class TripPointCreateView {
-    getTemplate() {
-        return createTripPointCreateTemplate();
+export class TripPointCreateView {
+  getTemplate() {
+    return createTripPointCreateTemplate();
+  }
+
+  getElement() {
+    if (!this. element) {
+      this.element = createElement(this.getTemplate());
     }
 
-    getElement() {
-        if (!this. element) {
-            this.element = createElement(this.getTemplate());
-        }
-        
-        return this.element;
-    }
+    return this.element;
+  }
 
-    removeElement() {
-        this.element = null;
-    }
+  removeElement() {
+    this.element = null;
+  }
 
 }

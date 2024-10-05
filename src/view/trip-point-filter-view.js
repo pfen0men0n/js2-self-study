@@ -1,7 +1,7 @@
 import { createElement } from '../render';
 
 function createTripPointFilterTemplate () {
-    return `<div class="trip-main__trip-controls  trip-controls">
+  return `<div class="trip-main__trip-controls  trip-controls">
     <div class="trip-controls__filters">
       <h2 class="visually-hidden">Filter events</h2>
       <form class="trip-filters" action="#" method="get">
@@ -22,21 +22,21 @@ function createTripPointFilterTemplate () {
 
 }
 
-export default class TripPointFilterView {
-    getTemplate() {
-        return createTripPointFilterTemplate();
+export class TripPointFilterView {
+  getTemplate() {
+    return createTripPointFilterTemplate();
+  }
+
+  getElement() {
+    if(!this.element) {
+      this.element = createElement(this.getTemplate());
     }
 
-    getElement() {
-        if(!this.element) {
-            this.element = createElement(this.getTemplate());
-        }
+    return this.element;
+  }
 
-        return this.element;
-    }
-
-    removeElement() {
-        this.elemet = null;
-    }
+  removeElement() {
+    this.elemet = null;
+  }
 
 }
